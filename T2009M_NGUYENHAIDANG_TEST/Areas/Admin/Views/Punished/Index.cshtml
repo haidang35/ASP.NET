@@ -1,0 +1,81 @@
+﻿@model IEnumerable<T2009M_NGUYENHAIDANG_TEST.Models.PunishedPerson>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    double amountTotal = 0;
+    int pushupTotal = 0; 
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Punished List</h6>
+        <div class="text-right">
+               <a href="@Url.Action("Create", "Punished")" class="btn btn-primary">Create New</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.StudentCode)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.Formality)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.AmountMoney)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.Pushup)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.CreatedAt)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        pushupTotal += item.Pushup;
+                        amountTotal += item.AmountMoney;
+                    <tr>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.StudentCode)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.Formality)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.AmountMoney)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.Pushup)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.CreatedAt)
+                        </td>
+                        <td class="text-center">
+                            <a href="@Url.Action("Edit", "Punished", new { id = item.Id })" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+                            <a href="@Url.Action("Details", "Punished", new { id = item.Id })" class="btn btn-info"><i class="fa fa-eye"></i></a>
+                            <a href="@Url.Action("Delete", "Punished", new { id = item.Id })" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    }
+                    <tr>
+                        <td colspan="2">Tổng số 
+                        </td>
+                        <td class="text-center">@amountTotal</td>
+                        <td class="text-center">@pushupTotal</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
