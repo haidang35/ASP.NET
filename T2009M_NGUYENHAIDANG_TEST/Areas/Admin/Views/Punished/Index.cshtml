@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
     double amountTotal = 0;
-    int pushupTotal = 0;
+    double pushupTotal = 0;
 }
 
 <div class="card shadow mb-4">
@@ -71,8 +71,10 @@
                         <td colspan="2">
                             Tổng số
                         </td>
-                        <td class="text-center">@amountTotal</td>
-                        <td class="text-center">@pushupTotal</td>
+                        <td class="text-center">
+                        Tổng tiền : @String.Format("{0:0,0}", amountTotal) VND <br />
+                            Chống đẩy: @pushupTotal
+                        </td>
                         <td></td>
                         <td></td>
                     </tr>
