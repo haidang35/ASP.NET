@@ -156,6 +156,14 @@
     <Compile Include="Migrations\202112110400086_UpdatePushedTable.Designer.cs">
       <DependentUpon>202112110400086_UpdatePushedTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112110435108_UpdatePunished.cs" />
+    <Compile Include="Migrations\202112110435108_UpdatePunished.Designer.cs">
+      <DependentUpon>202112110435108_UpdatePunished.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112110439548_UpdatePunished1.cs" />
+    <Compile Include="Migrations\202112110439548_UpdatePunished1.Designer.cs">
+      <DependentUpon>202112110439548_UpdatePunished1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\PunishedPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2094,6 +2102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112110400086_UpdatePushedTable.resx">
       <DependentUpon>202112110400086_UpdatePushedTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112110435108_UpdatePunished.resx">
+      <DependentUpon>202112110435108_UpdatePunished.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112110439548_UpdatePunished1.resx">
+      <DependentUpon>202112110439548_UpdatePunished1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

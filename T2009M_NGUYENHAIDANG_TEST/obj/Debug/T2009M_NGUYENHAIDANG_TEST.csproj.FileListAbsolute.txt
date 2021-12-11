@@ -89,3 +89,5 @@ C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\T2009M_NGUY
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\T2009M_NGUYENHAIDANG_TEST\obj\Debug\T2009M_NGUYENHAIDANG_TEST.Migrations.CreatePunishedPerson.resources
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\T2009M_NGUYENHAIDANG_TEST\obj\Debug\T2009M_NGUYENHAIDANG_TEST.Migrations.UpdatePunishedPersonTable.resources
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\T2009M_NGUYENHAIDANG_TEST\obj\Debug\T2009M_NGUYENHAIDANG_TEST.Migrations.UpdatePushedTable.resources
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\T2009M_NGUYENHAIDANG_TEST\obj\Debug\T2009M_NGUYENHAIDANG_TEST.Migrations.UpdatePunished.resources
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\T2009M_NGUYENHAIDANG_TEST\obj\Debug\T2009M_NGUYENHAIDANG_TEST.Migrations.UpdatePunished1.resources

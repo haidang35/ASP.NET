@@ -6,6 +6,11 @@ using System.Web;
 
 namespace T2009M_NGUYENHAIDANG_TEST.Models
 {
+    public enum FormalityPunished
+    {
+        Money = 1,
+        Pushup = 2,
+    }
     public class PunishedPerson
     {
         [Key]
@@ -15,11 +20,10 @@ namespace T2009M_NGUYENHAIDANG_TEST.Models
         public string StudentCode { get; set; }
         [Required(ErrorMessage = "Formality cannot be empty")]
         [Display(Name = "Hình thức phạt")]
-        public string Formality { get; set; }
-        [Display(Name = "Số tiền nộp phạt")]
-        public float AmountMoney { get; set; }
-        [Display(Name = "Số cái chống đẩy")]
-        public int Pushup { get; set; }
+        public FormalityPunished Formality { get; set; }
+        [Required(ErrorMessage = "Amount cannot be empty")]
+        [Display(Name = "Số tiền nộp phạt / chống đẩy")]
+        public float Amount { get; set; }
         [Display(Name = "Ngày nộp phạt")]
         [DataType(DataType.DateTime)]
         [ScaffoldColumn(false)]

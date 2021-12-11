@@ -10,7 +10,7 @@ namespace T2009M_NGUYENHAIDANG_TEST.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return Redirect("/Admin/Punished");
         }
 
         public ActionResult About()
