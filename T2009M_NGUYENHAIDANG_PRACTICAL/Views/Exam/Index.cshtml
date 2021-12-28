@@ -1,0 +1,84 @@
+﻿@model IEnumerable<T2009M_NGUYENHAIDANG_PRACTICAL.Models.Exam>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Exam List</h6>
+        <div class="text-right">
+            <a href="@Url.Action("Create", "Exam")" class="btn btn-primary">Create New</a>
+        </div>
+        @Html.Partial("_Message")
+
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.Subject)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.StartTime)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.ExamDate)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.Duration)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.ClassRoom)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.Faculty)
+                        </th>
+                        <th class="text-center">
+                            @Html.DisplayNameFor(model => model.Status)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.Subject)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.StartTime)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.ExamDate)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.Duration)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.ClassRoom)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.Faculty)
+                        </td>
+                        <td class="text-center">
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td class="text-center">
+                            <a href="@Url.Action("Edit", "Exam", new { id = item.Id })" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+                            <a href="@Url.Action("Details", "Exam", new { id = item.Id })" class="btn btn-info"><i class="fa fa-eye"></i></a>
+                            <a href="@Url.Action("Delete", "Exam", new { id = item.Id })" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

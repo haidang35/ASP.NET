@@ -1,0 +1,28 @@
+﻿
+@{
+    var message = ViewData["Message"] as T2009M_NGUYENHAIDANG_PRACTICAL.Models.Message;
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-warning">
+            Hello
+        </div>
+        @if (message != null)
+        {
+            switch (message.Type)
+            {
+                case T2009M_NGUYENHAIDANG_PRACTICAL.Models.MessageType.Success:
+                     <div class="alert alert-success">
+                        @message.Content
+                    </div>
+                    break;
+                case T2009M_NGUYENHAIDANG_PRACTICAL.Models.MessageType.Failed:
+                    <div class="alert alert-danger">
+                        @message.Content
+                    </div>
+                    break;
+            }
+        }
+
+    </div>
+</div>
