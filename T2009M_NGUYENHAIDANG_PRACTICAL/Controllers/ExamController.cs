@@ -40,6 +40,58 @@ namespace T2009M_NGUYENHAIDANG_PRACTICAL.Controllers
         // GET: Exam/Create
         public ActionResult Create()
         {
+            List<SelectListItem> subjectList = new List<SelectListItem>();
+            List<SelectListItem> classRoomList = new List<SelectListItem>();
+            List<SelectListItem> facultyList = new List<SelectListItem>();
+            subjectList.Add(new SelectListItem() { 
+                Text = "Core Java",
+                Value = "Core Java",
+            });
+            subjectList.Add(new SelectListItem()
+            {
+                Text = "Advance Java",
+                Value = "Advance Java",
+            });
+            subjectList.Add(new SelectListItem()
+            {
+                Text = "Programming C#",
+                Value = "Programming C#",
+            });
+
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B10",
+                Value = "B10",
+            });
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B16",
+                Value = "B16",
+            });
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B14",
+                Value = "B14",
+            });
+
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "Jayalakshmi",
+                Value = "Jayalakshmi",
+            });
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "Jonh Carter",
+                Value = "Jonh Carter",
+            });
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "HienPA",
+                Value = "HienPA",
+            });
+            ViewBag.Subjects = new SelectList(subjectList, "Value", "Text");
+            ViewBag.ClassRooms = new SelectList(classRoomList, "Value", "Text");
+            ViewBag.Faculties = new SelectList(facultyList, "Value", "Text");
             return View();
         }
 
@@ -47,12 +99,66 @@ namespace T2009M_NGUYENHAIDANG_PRACTICAL.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Exam exam)
         {
+            List<SelectListItem> subjectList = new List<SelectListItem>();
+            List<SelectListItem> classRoomList = new List<SelectListItem>();
+            List<SelectListItem> facultyList = new List<SelectListItem>();
+            subjectList.Add(new SelectListItem()
+            {
+                Text = "Core Java",
+                Value = "Core Java",
+            });
+            subjectList.Add(new SelectListItem()
+            {
+                Text = "Advance Java",
+                Value = "Advance Java",
+            });
+            subjectList.Add(new SelectListItem()
+            {
+                Text = "Programming C#",
+                Value = "Programming C#",
+            });
+
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B10",
+                Value = "B10",
+            });
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B16",
+                Value = "B16",
+            });
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B14",
+                Value = "B14",
+            });
+
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "Jayalakshmi",
+                Value = "Jayalakshmi",
+            });
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "Jonh Carter",
+                Value = "Jonh Carter",
+            });
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "HienPA",
+                Value = "HienPA",
+            });
+            ViewBag.Subjects = new SelectList(subjectList, "Value", "Text");
+            ViewBag.ClassRooms = new SelectList(classRoomList, "Value", "Text");
+            ViewBag.Faculties = new SelectList(facultyList, "Value", "Text");
             if (ModelState.IsValid)
             {
                 var now = DateTime.Now;
                 var startTimeExam = TimeSpan.Parse(exam.StartTime);
                 exam.ExamDate = exam.ExamDate.Date + startTimeExam;
-                exam.ExamDate.AddMinutes(exam.Duration);
+                var startTime = exam.ExamDate;
+                var endTime = exam.ExamDate.AddMinutes(exam.Duration);
                 Debug.WriteLine(exam.ExamDate);
                 if (DateTime.Compare(now, exam.ExamDate) < 0)
                 {
@@ -60,7 +166,9 @@ namespace T2009M_NGUYENHAIDANG_PRACTICAL.Controllers
                 }else if(DateTime.Compare(now, exam.ExamDate) > 0)
                 {
                     exam.Status = ExamStatus.Done;
-                }else if(DateTime.Compare(now, exam.ExamDate) == 0)
+                }
+                if(DateTime.Compare(now.Date, exam.ExamDate.Date) == 0 && 
+                    DateTime.Compare(now, startTime) >= 0 && DateTime.Compare(now, endTime) < 0)
                 {
                     exam.Status = ExamStatus.OnGoing;
                 }
@@ -83,6 +191,59 @@ namespace T2009M_NGUYENHAIDANG_PRACTICAL.Controllers
         // GET: Exam/Edit/5
         public ActionResult Edit(int? id)
         {
+            List<SelectListItem> subjectList = new List<SelectListItem>();
+            List<SelectListItem> classRoomList = new List<SelectListItem>();
+            List<SelectListItem> facultyList = new List<SelectListItem>();
+            subjectList.Add(new SelectListItem()
+            {
+                Text = "Core Java",
+                Value = "Core Java",
+            });
+            subjectList.Add(new SelectListItem()
+            {
+                Text = "Advance Java",
+                Value = "Advance Java",
+            });
+            subjectList.Add(new SelectListItem()
+            {
+                Text = "Programming C#",
+                Value = "Programming C#",
+            });
+
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B10",
+                Value = "B10",
+            });
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B16",
+                Value = "B16",
+            });
+            classRoomList.Add(new SelectListItem()
+            {
+                Text = "B14",
+                Value = "B14",
+            });
+
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "Jayalakshmi",
+                Value = "Jayalakshmi",
+            });
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "Jonh Carter",
+                Value = "Jonh Carter",
+            });
+            facultyList.Add(new SelectListItem()
+            {
+                Text = "HienPA",
+                Value = "HienPA",
+            });
+            ViewBag.Subjects = new SelectList(subjectList, "Value", "Text");
+            ViewBag.ClassRooms = new SelectList(classRoomList, "Value", "Text");
+            ViewBag.Faculties = new SelectList(facultyList, "Value", "Text");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
