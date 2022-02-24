@@ -18,6 +18,7 @@ namespace EmployeeService.Dtos
         public string EmployeeName { get; set; }
         [Required]
         [DataMember]
+        [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }
         [Required]
         [DataMember]
@@ -27,6 +28,7 @@ namespace EmployeeService.Dtos
         public string Department { get; set; }
         [Required]
         [DataMember]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [Required]
         [DataMember]

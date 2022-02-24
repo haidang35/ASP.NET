@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>EmployeeList</h2>
+<h2>Search Employee</h2>
 @{
     var message = TempData["Message"];
 }
@@ -22,6 +22,15 @@
         Create New
     </a>
 </p>
+<div>
+    @using (Html.BeginForm("EmployeeList", "Employee", FormMethod.Get))
+    {
+        <div class="form-group" style="display:flex">
+            <input class="form-control" name="departmentName" type="text" placeholder="Department Name"/>
+            <button class="btn btn-info" type="submit">Search</button>
+        </div>
+    }
+</div>
 
 <table class="table">
     <tr>

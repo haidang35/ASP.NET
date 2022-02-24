@@ -73,6 +73,5 @@ C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\Employe
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeClient\bin\Newtonsoft.Json.xml
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeClient\bin\Antlr3.Runtime.pdb
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeClient\obj\Debug\EmployeeClient.csproj.CopyComplete
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeClient\obj\Debug\EmployeeClient.dll
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeClient\obj\Debug\EmployeeClient.pdb

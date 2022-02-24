@@ -27,6 +27,7 @@ namespace EmployeeClient.Controllers
                     if(emp != null)
                     {
                         TempData["Message"] = "Add new employee successfully !";
+                        return RedirectToAction("EmployeeList");
                     }
                 }
             }
