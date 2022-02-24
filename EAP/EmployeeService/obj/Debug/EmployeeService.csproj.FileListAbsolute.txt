@@ -1,0 +1,14 @@
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\bin\EmployeeService.dll.config
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\bin\EmployeeService.dll
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\bin\EmployeeService.pdb
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\bin\EntityFramework.dll
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\bin\EntityFramework.SqlServer.dll
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\bin\EntityFramework.xml
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\bin\EntityFramework.SqlServer.xml
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\obj\Debug\EmployeeService.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\obj\Debug\EmployeeService.dll
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\obj\Debug\EmployeeService.pdb
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\obj\Debug\EmployeeService.Migrations.InitialDatababse.resources
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\obj\Debug\EmployeeService.csproj.GenerateResource.cache
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\obj\Debug\EmployeeService.Migrations.UpdateEmployee.resources
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\EAP\EmployeeService\obj\Debug\EmployeeService.csproj.AssemblyReference.cache
