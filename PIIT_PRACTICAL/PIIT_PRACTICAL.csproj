@@ -170,6 +170,7 @@
     <Content Include="Areas\Admin\Views\Coin\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Coin\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Coin\Index.cshtml" />
+    <Content Include=".gitignore" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
