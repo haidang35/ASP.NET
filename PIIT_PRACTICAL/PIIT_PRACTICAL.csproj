@@ -130,7 +130,6 @@
     <Compile Include="Areas\Admin\Controllers\CoinController.cs" />
     <Compile Include="Areas\Admin\Controllers\MarketController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MarketController.cs" />
     <Compile Include="Data\MyDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -201,7 +200,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Market.cshtml" />
-    <Content Include="Views\Market\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

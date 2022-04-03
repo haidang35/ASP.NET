@@ -7,9 +7,24 @@
 
 <h2>Market</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@using (Html.BeginForm("Market", "Home", FormMethod.Get))
+{
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.DropDownList("marketName", (IEnumerable<SelectListItem>)ViewBag.Markets, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <input class="form-control" name="coinName" type="text" value="@ViewBag.CoinName" />
+            </div>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-primary">Search</button>
+        </div>
+    </div>
+}
 <table class="table">
     <tr>
         <th>
@@ -30,47 +45,32 @@
         <th>
             @Html.DisplayNameFor(model => model.Volume24h)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedAt)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UpdatedAt)
-        </th>
-        <th></th>
+      
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Market.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BaseAsset)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.QouteAsset)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Volume24h)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedAt)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedAt)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Market.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaseAsset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QouteAsset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Volume24h)
+            </td>
+          
+        </tr>
+    }
 
 </table>

@@ -1,4 +1,5 @@
 ﻿using PIIT_PRACTICAL.Data;
+using PIIT_PRACTICAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,26 +13,41 @@ namespace PIIT_PRACTICAL.Controllers
         public MyDbContext db = new MyDbContext();
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Market");
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return RedirectToAction("Market");
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return RedirectToAction("Market");
         }
 
-        public ActionResult Market()
+        public ActionResult Market(string marketName, string coinName)
         {
-            var coinList = db.Coins.ToList();
+            var coinList = new List<Coin>();
+            if (! string.IsNullOrEmpty(marketName))
+            {
+                var market = db.Markets.Where(m => m.Name == marketName).FirstOrDefault();
+                if(market != null)
+                {
+                    coinList = db.Coins.Where(c => c.MarketId == market.Id).ToList();
+                }
+            }else
+            {
+                coinList = db.Coins.ToList();
+            }
+
+            if(! string.IsNullOrEmpty(coinName))
+            {
+                coinList = coinList.Where(c => c.Name.Contains(coinName)).ToList();
+            }
+            var markets = new SelectList(db.Markets.ToList(), "Name", "Name", marketName);
+            ViewBag.Markets = markets;
+            ViewBag.coinName = coinName;
             return View(coinList);
         }
     }

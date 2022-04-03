@@ -81,3 +81,4 @@ C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\PIIT_PRACTI
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\PIIT_PRACTICAL\obj\Debug\PIIT_PRACTICAL.pdb
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\PIIT_PRACTICAL\obj\Debug\PIIT_PRACTICAL.Migrations.InitialDatabase.resources
 C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\PIIT_PRACTICAL\obj\Debug\PIIT_PRACTICAL.csproj.GenerateResource.cache
+C:\Users\nguye\Desktop\LearnToMaster\ASPDotNetTraning\ASP.NET-T2009M\PIIT_PRACTICAL\obj\Debug\PIIT_PRACTICAL.csproj.AssemblyReference.cache
